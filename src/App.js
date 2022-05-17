@@ -2,7 +2,9 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from './pages/Home';
-import Movie from './pages/Movie';
+import MovieList from './pages/MovieList';
+import Detail from './pages/Detail';
+
 
 
 function App() {
@@ -10,7 +12,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='movie' element={<Movie/>}/>
+        <Route path='movieList' element={<MovieList />} />
+        <Route path='movie/:id' element={<Detail/>}/>
       </Routes>
     </BrowserRouter>
   );

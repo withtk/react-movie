@@ -5,7 +5,7 @@ function Home() {
     return (
         <div className="first">
             <h1>home start</h1>
-            <Link to="movie" >Movie로 이동</Link>
+            <Link to="movieList" >Movie List로 이동</Link>
         </div>
     )
 }
