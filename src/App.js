@@ -1,15 +1,18 @@
-import './App.css';
-import { BrowserRoute, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home.js';
+import './App.css'; 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from './pages/Home';
+import Movie from './pages/Movie';
 
 
 function App() {
   return (
-    <BrowserRoute>
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='movie' element={<Movie/>}/>
       </Routes>
-    </BrowserRoute> 
+    </BrowserRouter>
   );
 }
 
