@@ -20,7 +20,7 @@ function Detail( ) {
     return (
         <div> 
             <h1>Detail..!.</h1>
-            movie $$ <div>
+            movie QQQQQ <div>
 
             </div>
             {/* <h1>{title}</h1>
