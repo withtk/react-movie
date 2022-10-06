@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <!-- <script src="jquery-3.6.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/hrjs"></script>
+    <script type="text/javascript">
+        document.onselectionchange = OnChange;
+        let range;
+        const lli = [];
+        function OnChange() {
+            range = window.getSelection();
+            if (range.toString().length == 0) console.log("  empty");
+            else console.log("selection are\n" + range.toString());
+
+        }
+ 
+        function go() {
+            let result = range.toString()
+            new HR("#mytext", {
+                highlight: result,
+                replaceWith: result,
+                backgroundColor: "#B4FFEB"
+            }).hr();
+        }
+        function init() {
+            $('#mytext span').css('background-color','#fff'); 
+            console.log("init Click")
+        } 
+    </script>
+</head>
+
+<body>
+    <div id="mytext">
+        <h1>title abc</h1>
+        Lorem ipsum dolor sit amet.Contrary to popular bel
+        <img src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg" width="100px">
+ 
+        <p id=""ppp">Lorem ipsum dolor sit amet.Contrary to popular belief, Lorem Ipsum is not simply random text.
+        </p>
+        <button onclick="go()">GO</button> 
+     </div>
+</body>
+
+</html>
