@@ -5,6 +5,7 @@ import Estate from './estate/estate';
 import Menu2 from '../menu/menu2'; 
 import Corporation from './estate/corporration';
 import Home from './Home';
+import Mystyle from './styled/Mystyle';
 
 
 const Main = ({ history }) => {
@@ -19,7 +20,7 @@ const Main = ({ history }) => {
         { label: "5qkd", icon: <LaptopOutlined />, goto: <Menu2 />, onClick: menuClick },
 
         { label: "6no", icon: <LaptopOutlined />, goto: <div>test 123</div>, onClick: menuClick },
-        { label: "777", icon: <LaptopOutlined />, goto: <Corporation />, onClick: menuClick },
+        { label: "styled-component", icon: <LaptopOutlined />, goto: <Mystyle />, onClick: menuClick },
         { label: "팔방", icon: <LaptopOutlined />, goto: <Menu2 />, onClick: menuClick },
         { label: "구구구", icon: <LaptopOutlined />, goto: <div>test 123</div>, onClick: menuClick },
         { label: "MenuList", icon: <LaptopOutlined />, goto: <Home />, onClick: menuClick }
@@ -65,7 +66,7 @@ const Main = ({ history }) => {
                 icon: <LaptopOutlined />,
                 label: "finally",
                 onClick: subMenuClick,
-                children: [3, 4].map((i) => menuList[i])
+                children: [6, 4].map((i) => menuList[i])
             }]
 
             
@@ -113,12 +114,11 @@ const Main = ({ history }) => {
                             items={topMenu[topNo].submenu} />
                     </Sider>
                     <Content id="mainContent" style={{   padding: '0 24px', minHeight: 280, }}>
-                        Content in sider
                         {
                             menuList[menuNo].goto
                             // topMenu[topNo].submenu[subNo].children[menuNo].goto 
                         }
-                        <br /> end.
+                        <br />
 
                     </Content>
                 </Layout>
@@ -126,7 +126,7 @@ const Main = ({ history }) => {
             </Content>
 
             <Footer style={{ textAlign: 'center', }}>
-                Ant Design ©2018 Created by Ant UED
+                TkiPro ©2018 Created by tk
             </Footer>
         </Layout>
     )
