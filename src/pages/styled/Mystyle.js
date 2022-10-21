@@ -2,8 +2,7 @@ import { Button } from 'antd';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-// git test1
-const MyBtn = styled.button`
+ const MyBtn = styled.button`
     color:blue;
     background-color : #fa1;
     `;
