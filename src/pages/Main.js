@@ -79,13 +79,13 @@ const Main = ({ history }) => {
     }
     function subMenuClick(e) {
         // setSubNo(e.key);
-        console.log("--------- onSubMenuClick-------");
+        // console.log("--------- onSubMenuClick-------");
     }
     function menuClick(e) {
         setMenuNo(e.key);
-        console.log(topMenu[topNo].label + " : " + topNo);
+        // console.log(topMenu[topNo].label + " : " + topNo);
         // console.log(topMenu[topNo].submenu[subNo].label + " : " + subNo);
-        console.log(menuList[e.key].label + " : " + e.key);
+        // console.log(menuList[e.key].label + " : " + e.key);
     }
 
 

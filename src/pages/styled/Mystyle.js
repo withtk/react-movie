@@ -1,6 +1,7 @@
 import { Button } from 'antd';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+
 
 const MyBtn = styled.button`
     color:blue;
@@ -21,11 +22,23 @@ const UrBtnStyle = styled(UrBtn)`
 
 const PrimaryButton = styled.button`
     color : white;
-    background-color : ${prop=>prop.aaa ? "blue" : "pink"}
+    background-color : ${prop => prop.aaa ? "blue" : "pink"}
     `;
 
 const Mystyle = () => {
     const [a, setA] = useState("");
+
+
+    useEffect(() => {
+        console.log("start useEffect ==========");
+        const timer = setInterval(() => {
+            console.log("timer...")
+        }, 500);
+        return ()=>{
+            clearInterval(timer);
+            console.log("unMounted Style component ------------")
+        }
+    }, [])
     return <>
         <h1>myStyle 1</h1>
         <MyBtn>hi</MyBtn><br />
