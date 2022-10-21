@@ -3,7 +3,7 @@ import { Radio, Input, Button } from 'antd';
 import { UserOutlined, PoweroffOutlined } from '@ant-design/icons';
 import { 거래종류 } from '../../config/myenum';
 
-
+// git test 3
 export default function Estate() {
 
     const optionsWithDisabled = Object.keys(거래종류).map(k => {

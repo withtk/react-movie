@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
 
+// stash test입니다.
 function Home() { 
     useEffect(() => {
         console.log('컴포넌트가 화면에 나타남');
