@@ -2,7 +2,7 @@ import { Button } from 'antd';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
- const MyBtn = styled.button`
+const MyBtn = styled.button` 
     color:blue;
     background-color : #fa1;
     `;
@@ -33,7 +33,7 @@ const Mystyle = () => {
         const timer = setInterval(() => {
             console.log("timer...")
         }, 500);
-        return ()=>{
+        return () => {
             clearInterval(timer);
             console.log("unMounted Style component ------------")
         }

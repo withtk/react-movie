@@ -6,6 +6,8 @@ import Menu2 from '../menu/menu2';
 import Corporation from './estate/corporration';
 import Home from './Home';
 import Mystyle from './styled/Mystyle';
+import Counter from './counter/Counter';
+import DoContext from './context/DoContext';
 
 
 const Main = ({ history }) => {
@@ -21,12 +23,12 @@ const Main = ({ history }) => {
 
         { label: "6no", icon: <LaptopOutlined />, goto: <div>test 123</div>, onClick: menuClick },
         { label: "styled-component", icon: <LaptopOutlined />, goto: <Mystyle />, onClick: menuClick },
-        { label: "팔방", icon: <LaptopOutlined />, goto: <Menu2 />, onClick: menuClick },
-        { label: "구구구", icon: <LaptopOutlined />, goto: <div>test 123</div>, onClick: menuClick },
-        { label: "MenuList", icon: <LaptopOutlined />, goto: <Home />, onClick: menuClick }
+        { label: "Context", icon: <LaptopOutlined />, goto: <DoContext />, onClick: menuClick },
+        { label: "REDUX", icon: <LaptopOutlined />, goto: <div>test 123</div>, onClick: menuClick },
+        { label: "MenuList", icon: <LaptopOutlined />, goto: <Counter />, onClick: menuClick }
     ].map((v, i) => { return { key: i, ...v } });
 
-    const [topNo, setTopNo] = useState(0);
+    const [topNo, setTopNo] = useState(1);
     const [subNo, setSubNo] = useState(0);
     const [menuNo, setMenuNo] = useState(0);
     const topMenu = [
@@ -59,7 +61,7 @@ const Main = ({ history }) => {
                 icon: <HomeOutlined />,
                 label: "Intermediate",
                 onClick: subMenuClick,
-                children: [0, 1, 2].map((i) => menuList[i])
+                children: [0, 1, 2,7,9].map((i) => menuList[i])
             },
             {
                 key: 120,
