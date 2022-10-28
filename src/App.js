@@ -2,12 +2,12 @@ import './App.css';
 import 'antd/dist/antd.css';
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './pages/Home';
+import Home from './pages/home/Home';
 import Main from './pages/Main';
 import Menu2 from './menu/menu2'; 
 
-const MovieList = lazy(() => import('./pages/MovieList'));
-const Detail = lazy(() => import('./pages/Home'));
+const MovieList = lazy(() => import('./pages/movie/MovieList'));
+const Detail = lazy(() => import('./pages/home/Home'));
 const TTTest = lazy(() => import('./TTTest'));
 const Login = lazy(() => import('./pages/login/Login'));
 const TestInput = lazy(() => import('./test/TestInput'));
