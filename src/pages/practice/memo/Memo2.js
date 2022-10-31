@@ -9,7 +9,7 @@ const Memo2 = () => {
             country: isKorea ? "한국" : "우주"
         }
     }, [isKorea]);
-
+    
     useEffect(() => {
         console.log('useEffect~');
     }, [isKorea]);

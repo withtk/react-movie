@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Radio, Input, Button } from 'antd';
 import { UserOutlined, PoweroffOutlined } from '@ant-design/icons';
 import { 거래종류 } from '../../config/myenum';
 
- export default function Estate() {
+export default function Estate() {
+
+    const inputRef = useRef();
+    useEffect(() => {
+        inputRef.current.focus();
+    })
 
     const optionsWithDisabled = Object.keys(거래종류).map(k => {
         if (거래종류[k].value === "증여") 거래종류[k].disabled = true
@@ -15,7 +20,7 @@ import { 거래종류 } from '../../config/myenum';
     const onChange4 = ({ target: { value } }) => {
         setSel(value);
     };
- 
+
     const [loading, setLoading] = useState(false);
 
     const enterLoading = () => {
@@ -37,7 +42,7 @@ import { 거래종류 } from '../../config/myenum';
             />
             <br />
             <br />
-            <Input size="large" placeholder="large size" prefix={<UserOutlined />} />
+            <Input ref={inputRef} size="large" placeholder="large size" prefix={<UserOutlined />} />
             <br />
             <br />
             <Button
