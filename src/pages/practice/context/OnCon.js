@@ -6,6 +6,7 @@ import { UserContext } from "./UserContext";
 
 const OnCon = () => {
 
+    const { login } = useContext(UserContext);
     const { name, setName } = useState("");
 
     const aaaRef = useRef();
@@ -15,7 +16,7 @@ const OnCon = () => {
 
     return (
         <>
-            <h1 id="aaa">Do Context213 : {name}</h1>
+            <h1 id="aaa">OnCon : {login} !!</h1>
             <input ref={aaaRef} id="aaa" type="text" />
             <Button onClick={onClick}>change name</Button>
 

@@ -12,6 +12,7 @@ import MovieList from './movie/MovieList';
 import Movie from './movie/Movie';
 import BaseCallback from './practice/callback/BaseCallback';
 import BaseContext from './practice/context/BaseContext'; 
+import MyQuery from './practice/query/MyQuery';
 
 const Main = ({ history }) => { 
     
@@ -28,7 +29,7 @@ const Main = ({ history }) => {
         { label: "styled-component", icon: <LaptopOutlined />, goto: <Mystyle />, onClick: menuClick },
         { label: "Context", icon: <LaptopOutlined />, goto: <BaseContext />, onClick: menuClick },
         { label: "REDUX", icon: <LaptopOutlined />, goto: <div>test 123</div>, onClick: menuClick },
-        { label: "BaContext", icon: <LaptopOutlined />, goto: <BaseContext/>, onClick: menuClick }
+        { label: "MyQuery", icon: <LaptopOutlined />, goto: <MyQuery/>, onClick: menuClick }
     ].map((v, i) => { return { key: i, ...v } });
 
     const [topNo, setTopNo] = useState(1);
@@ -64,7 +65,7 @@ const Main = ({ history }) => {
                 icon: <HomeOutlined />,
                 label: "Intermediate",
                 onClick: subMenuClick,
-                children: [0, 1, 2, 4,5, 7 ].map((i) => menuList[i])
+                children: [0, 1, 2, 4,5, 7,9 ].map((i) => menuList[i])
             },
             {
                 key: 120,

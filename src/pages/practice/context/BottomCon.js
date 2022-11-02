@@ -7,7 +7,7 @@ const BottomCon = () => {
     // const { isDark, setIsDark } = useState([]);
 
     return ( 
-        <h2> botton con</h2>
+        <h2> bottom con</h2>
     )
 }
 
