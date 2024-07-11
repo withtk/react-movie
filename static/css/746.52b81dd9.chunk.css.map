@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/746.52b81dd9.chunk.css","mappings":"AAEA,OACI,wBAAyB,CACzB,YACF","sources":["pages/home/home.css"],"sourcesContent":["\n\n.first{\n    background-color: #d2e0fd;\n    height: 500px;\n  }"],"names":[],"sourceRoot":""}
