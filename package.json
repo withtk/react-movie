@@ -24,8 +24,8 @@
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +45,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://withtk.github.io/react-movie/"
+  "homepage": "https://withtk.github.io/react-movie/",
+  "devDependencies": {
+    "prettier": "3.3.3"
+  }
 }
