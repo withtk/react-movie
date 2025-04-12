@@ -18,9 +18,10 @@ const MainComponent = () => {
 
     return (
         <div>
+            <h1>this is modal test</h1>
             <p>{msg}</p>
             <Button onClick={handleOpenModal}>모달 열기</Button>
-            <Button onClick={() => closeModal()}>모달 닫기F</Button>
+            <Button onClick={() => closeModal()}>모달 닫기</Button>
         </div>
     )
 };

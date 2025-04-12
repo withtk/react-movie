@@ -14,7 +14,7 @@ export default function Test2({sendMsg}) {
                 <Button
                     type="primary"
                     icon={<PoweroffOutlined/>}
-                    onClick={() => sendMsg(' hi~ nice to ')}>
+                    onClick={() => sendMsg && sendMsg(' hi~ nice to ')}>
                     Click me!
                 </Button>
 
