@@ -11,6 +11,7 @@ const Home = lazy(() => import('./pages/home/Home'));
 const TTTest = lazy(() => import('./test/TTTest'));
 const Login = lazy(() => import('./pages/login/Login'));
 const TestInput = lazy(() => import('./test/TestInput'));
+const MMO = lazy(() => import('./pages/modal'));
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path={process.env.PUBLIC_URL + '/menu2'} element={<Menu2 />} />
           <Route path={process.env.PUBLIC_URL + '/TTT'} element={<TTTest />} />
           <Route path={process.env.PUBLIC_URL + '/login'} element={<Login />} />
+          <Route path={process.env.PUBLIC_URL + '/modal'} element={<MMO />} />
           <Route path={process.env.PUBLIC_URL + '/TestInput'} element={<TestInput />} />
           <Route path={process.env.PUBLIC_URL + '/movieList'} element={<MovieList />} />
           <Route path={process.env.PUBLIC_URL + '/movie/:id'} element={<Home />} />

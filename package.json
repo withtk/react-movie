@@ -45,7 +45,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://withtk.github.io/react-movie/",
   "devDependencies": {
     "prettier": "3.3.3"
   }
