@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
-import { PoweroffOutlined } from '@ant-design/icons';
-import { Button } from 'antd';
+import { PoweroffOutlined, UserAddOutlined } from '@ant-design/icons';
+import { Button, Card, Row, Col, Space } from 'antd';
+import { Link } from 'react-router-dom';
 
 function Login() {
 
@@ -59,35 +60,49 @@ function Login() {
     return (
         <>
             <div>
-                <h1>login</h1>
-                <Button
-                    type="primary"
-                    icon={<PoweroffOutlined />}
-                    loading={loadings[0]}
-                    onClick={() => enterLoading(0)}>
-                    Click me!
-                </Button>
-                <Button
-                    type="primary"
-                    icon={<PoweroffOutlined />}
-                    loading={loadings[1]}
-                    onClick={() => enterLoading(1)}>
-                    Click me!
-                </Button>
-                <Button
-                    type="primary"
-                    icon={<PoweroffOutlined />}
-                    loading={loadings[2]}
-                    onClick={() => onClickHandle(2)}>
-                    PEN
-                </Button>
-                <Button
-                    type="primary"
-                    icon={<PoweroffOutlined />}
-                    loading={loadings[3]}
-                    onClick={() => onClickHandle(3)}>
-                    StrArr
-                </Button>
+                <Row justify="center" style={{ marginTop: '20px' }}>
+                    <Col>
+                        <Card title="로그인" style={{ width: 300 }}>
+                            <Space direction="vertical" style={{ width: '100%' }}>
+                                <h1>login</h1>
+                                <Button
+                                    type="primary"
+                                    icon={<PoweroffOutlined />}
+                                    loading={loadings[0]}
+                                    onClick={() => enterLoading(0)}>
+                                    Click me!
+                                </Button>
+                                <Button
+                                    type="primary"
+                                    icon={<PoweroffOutlined />}
+                                    loading={loadings[1]}
+                                    onClick={() => enterLoading(1)}>
+                                    Click me!
+                                </Button>
+                                <Button
+                                    type="primary"
+                                    icon={<PoweroffOutlined />}
+                                    loading={loadings[2]}
+                                    onClick={() => onClickHandle(2)}>
+                                    PEN
+                                </Button>
+                                <Button
+                                    type="primary"
+                                    icon={<PoweroffOutlined />}
+                                    loading={loadings[3]}
+                                    onClick={() => onClickHandle(3)}>
+                                    StrArr
+                                </Button>
+                                <Button
+                                    type="link"
+                                    icon={<UserAddOutlined />}
+                                    style={{ marginTop: '10px' }}>
+                                    <Link to="/register">회원가입</Link>
+                                </Button>
+                            </Space>
+                        </Card>
+                    </Col>
+                </Row>
             </div>
         </>
     )
